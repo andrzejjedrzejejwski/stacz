@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Stacz kolejkowy</string>
+    <string name="action_refresh">Odświerz</string>
+    <string name="departments_header">Dostępne urzędy:</string>
+    <string name="stands_header">Wybierz sprawę:</string>
+    <string name="error">Wystąpił problem z połączeniem</string>
+    <string name="info_name">Nazwa stanowiska</string>
+    <string name="info_current_number">Aktualny numer</string>
+    <string name="info_time">Ostatnia aktualizacja</string>
+    <string name="enable_notifications">Follow</string>
+    <string name="disable_notifications">Unfollow</string>
+    <string name="actual_number">Aktualny numer:</string>
+    <string name="your_number">Twój numer:</string>
+    <string name="hint_number">...</string>
+    <string name="people">os.</string>
+    <string name="min">min.</string>
+    <string name="estimated_time">Szacowany czas</string>
+    <string name="in_queue">W kolejce</string>
+    <string name="in_queue_ahead">Przed Tobą</string>
+    <string name="govName">Urząd Dzielnicy Wola</string>
+
+</resources>

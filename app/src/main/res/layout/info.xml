@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:qs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_height="@dimen/abc_action_bar_default_height_material">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/logotopright"
+                />
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:gravity="center"
+                android:textColor="@color/orange"
+                android:maxLines="1"
+                android:lines="1"
+                android:ellipsize="end"
+                android:text="test"
+                android:textSize="18sp"
+                />
+
+        </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/actual_number"
+        android:layout_below="@id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/actual_number"
+        android:textSize="25sp"
+        />
+
+    <TextView
+        android:id="@+id/lcd_layout"
+        android:layout_below="@id/actual_number"
+        android:background="@drawable/border_orange"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:textColor="@color/orange"
+        android:text="-"
+        android:maxLines="1"
+        android:lines="1"
+        android:singleLine="true"
+        qs:fontPath="fonts/lcd-bold.ttf"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        tools:ignore="MissingPrefix" />
+
+    <include
+        android:id="@+id/separator_above"
+        android:layout_below="@id/lcd_layout"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        layout="@layout/separator" />
+
+    <LinearLayout
+        android:id="@+id/info_layout"
+        android:layout_below="@id/separator_above"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0 min"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/clock"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/people_waiting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="0 os."
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:drawableRight="@drawable/people"
+            android:drawablePadding="10dp"
+            android:gravity="center|right"
+            />
+
+     </LinearLayout>
+
+    <include
+        android:id="@+id/separator_below"
+        android:layout_below="@id/info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        layout="@layout/separator" />
+
+    <TextView
+        android:id="@+id/user_number_text"
+        android:layout_below="@id/separator_below"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="@string/your_number"
+        android:textSize="25sp"
+        />
+
+    <EditText
+        android:id="@+id/user_number"
+        android:layout_below="@id/user_number_text"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/border_filled_white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:maxLength="7"
+        android:hint="@string/hint_number"
+        android:textColorHint="@color/black"
+        android:maxLines="1"
+        android:lines="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:inputType="textNoSuggestions"
+        android:imeOptions="actionDone"
+
+        />
+
+    <ImageButton
+        android:id="@+id/notification_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:src="@drawable/lowerstripewhite"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
